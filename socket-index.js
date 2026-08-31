@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
-const User = require("../models/User");
-const Message = require("../models/Message");
-const Chat = require("../models/Chat");
+const User = require("./models-User");
+const Message = require("./models-Message");
+const Chat = require("./models-Chat");
 
 /**
  * App ya Kotlin itaunganisha socket namna hii (Socket.IO Java/Kotlin client):

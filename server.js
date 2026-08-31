@@ -4,13 +4,13 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 
-const connectDB = require("./config/db");
-const initSocket = require("./socket");
+const connectDB = require("./config-db");
+const initSocket = require("./socket-index");
 
-const authRoutes = require("./routes/auth");
-const userRoutes = require("./routes/users");
-const chatRoutes = require("./routes/chats");
-const messageRoutes = require("./routes/messages");
+const authRoutes = require("./routes-auth");
+const userRoutes = require("./routes-users");
+const chatRoutes = require("./routes-chats");
+const messageRoutes = require("./routes-messages");
 
 const app = express();
 const server = http.createServer(app);
