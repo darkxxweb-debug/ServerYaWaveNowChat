@@ -26,6 +26,15 @@ const messageSchema = new mongoose.Schema(
       enum: ["sent", "delivered", "read"],
       default: "sent",
     },
+    // Nani tayari amepokea na kuhifadhi ujumbe huu local kwenye simu yake.
+    // Ukishafika kwa washiriki wote (isipokuwa mtumaji), ujumbe huu unafutwa
+    // kwenye server DB — angalia routes-messages.js na socket-index.js.
+    deliveredTo: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
     readBy: [
       {
         type: mongoose.Schema.Types.ObjectId,
